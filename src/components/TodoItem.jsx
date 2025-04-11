@@ -23,7 +23,7 @@ function TodoItem({
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               onSaveEdit(todo.id, e.target.value);
-              setTimeout(() => inputRef.current.blur(), 0);
+              setTimeout(() => inputRef.current?.blur(), 0);
               inputRef.current.blur(); // 自动触发blur
             }
             if (e.key === "Escape") onCancelEdit(todo.id);
